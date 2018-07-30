@@ -1,0 +1,233 @@
+html {
+    background: rgb(30, 24, 42);
+    color: #EEE;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    padding: 12.5vh 10vw 0;
+}
+
+/* Header styles */
+header {
+    /* border-bottom: 1px solid #EEE; */
+    display: grid;
+    grid-template-columns: 48% 50%;
+    padding-top: 5em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #796DA3;
+    width: 100vw;
+    margin-left: -12vw;
+    margin-top: 7.5em;
+    margin-bottom: 1.5em;
+}
+
+.header-background {
+    left: -10vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.header-logo-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+
+.header-logo {
+    height: 75px;
+}
+
+header h1 {
+    align-items: center;
+    display: flex;
+    font-weight: 100;
+    font-size: 1.25rem;
+    justify-content: center;
+    letter-spacing: 1.5rem;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* End of Header styles */
+
+
+.what-its-about {
+    display: grid;
+    grid-template-columns: 52% 40%;
+    grid-column-gap: 2em;
+    margin-bottom: 2em;
+}
+
+.what-its-about .about-icons-wrapper {
+    padding-top: 1.25em;
+}
+
+.what-its-about .about-icons {
+    height: 100px;
+}
+
+.what-its-about p {
+    font-size: .8em;
+    line-height: 1.7;
+    letter-spacing: 4px;
+    font-weight: 100; 
+}
+
+
+/* Footer Styles */
+
+footer {
+    display: grid;
+    grid-template-columns: 52% 40%;
+    grid-column-gap: 2em;
+    margin-bottom: 1em;
+}
+
+footer form label {
+    font-weight: bold;
+    font-size: .8em;
+    letter-spacing: 1px;
+    margin-right: 2em;
+    text-transform: uppercase;
+}
+
+footer form input {
+    font-size: .8em;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #796DA3;
+    color: #DDD;
+    outline: none;
+    padding-bottom: .5rem;
+    margin-right: .5em;
+    width: 200px;
+}
+footer form input:focus {
+    border-bottom-color: #FFF;
+}
+
+
+footer form button {
+    background: 0;
+    border: 2px solid #796DA3;
+    border-radius: .5em;
+    color: #796DA3;
+    font-size: .8em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: .35rem 1rem;
+    text-transform: uppercase;
+}
+
+footer form button:hover {
+    background: #796DA3;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+footer form input::-webkit-input-placeholder {
+    color: #796DA3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+footer .social-links a { 
+    margin-right: .35em; 
+}
+footer .social-links a img {
+    height: 20px;
+}
+
+/* End of Footer Styles */
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
