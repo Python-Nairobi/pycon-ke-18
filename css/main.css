@@ -49,10 +49,10 @@ hr {
 header h1 {
     align-items: center;
     display: flex;
-    font-weight: 100;
-    font-size: 1.25rem;
+    font-weight: bold;
+    font-size: 1.3rem;
     justify-content: center;
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.0rem;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
@@ -116,6 +116,7 @@ footer form input:focus {
 }
 
 
+header a,
 footer form button {
     background: 0;
     border: 2px solid #29ABE2;
@@ -126,8 +127,10 @@ footer form button {
     letter-spacing: 3px;
     padding: .35rem 1rem;
     text-transform: uppercase;
+    text-decoration: none
 }
 
+header a:hover,
 footer form button:hover {
     background: #29ABE2;
     color: #FFF;
@@ -201,7 +204,7 @@ footer .social-links a img {
         padding: 5vw;
         text-align: center;
     }
-    
+
     footer form {
         margin: 0 0 2em;
     }
