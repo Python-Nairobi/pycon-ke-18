@@ -1,0 +1,3 @@
+[submodule "pelican-pyconke-18"]
+	path = pelican-pyconke-18
+	url = git@github.com:Python-Nairobi/pelican-pyconke-18.git
