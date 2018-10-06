@@ -1,0 +1,6 @@
+*.tmp
+*.pid
+*.pyc
+output
+*.idea
+*.vscode
