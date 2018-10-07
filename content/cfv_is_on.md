@@ -29,13 +29,7 @@ reached.
 
 In addition to this feel free to join:
 
-  - Python Nairobi Meetup group: https://www.meetup.com/Python-Nairobi/
-  - Telegram: https://telegram.me/pythonKE
-  - Mailing list: https://mail.python.org/mailman/listinfo/python-ke
-  - Slack: https://python-ke.herokuapp.com/
-
-  &nbsp;  
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLSf25kfyBIEdxI5gmXFHqwIN_xS_854f_78BL5OGPYhTGH_eKg/viewform?embedded=true"
-frameborder="0" marginheight="0" marginwidth="0" width="100%" height="2700" >
-Loading...</iframe>
+  - [Python Nairobi Meetup group](https://www.meetup.com/Python-Nairobi/)
+  - [Telegram](https://telegram.me/pythonKE)
+  - [Mailing list](https://mail.python.org/mailman/listinfo/python-ke)
+  - [Slack](https://python-ke.herokuapp.com/)

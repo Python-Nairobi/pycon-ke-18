@@ -22,7 +22,7 @@ To contribute, we recommend you install:-
 1. Then create a branch, naming it along the lines as your topic of contribution.
 
 ## TIPS
-1. Lazy way to update submodule(s): `git submodule foreach --recursive git pull origin master`
+1. Alternative lazy way to update submodule(s): `git submodule foreach --recursive git pull origin master` or `git submodule update --remote --merge`
 1. Clean and reset submodule(s): `git submodule foreach --recursive git reset --hard`
 
 ## EDITING

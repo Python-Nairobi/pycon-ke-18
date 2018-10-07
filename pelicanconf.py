@@ -30,7 +30,9 @@ SOCIAL = (
     ('github', 'https://github.com/python-nairobi'),
     ('twitter', 'https://twitter.com/pynbo'),
     ('meetup', 'https://www.meetup.com/Python-Nairobi/'),
-    ('file-text', 'http://blog.pynbo.or.ke/'),
+    ('blog', 'http://blog.pynbo.or.ke/'),
+    ('facebook', 'https://www.facebook.com/PythonNairobi/'),
+    ('youtube', 'https://www.youtube.com/channel/UCRDIwuaMTjxCvKyMdKqv6uw'),
 )
 
 THEME = "pelican-pyconke-18"
@@ -39,7 +41,7 @@ NAVITEMS = (
     #('Registration', '/registration'),
     #('Schedule', '/schedule'),
     #('Call for Proposals', '/call_for_proposals'),
-    ('Volunteering', '/call_for_volunteers'),
+    #('Volunteering', '/call_for_volunteers'),
     ('CoC', '/coc')
 )
 
