@@ -4,3 +4,4 @@
 output
 *.idea
 *.vscode
+__pycache__
