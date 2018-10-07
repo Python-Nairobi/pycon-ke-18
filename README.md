@@ -21,6 +21,10 @@ To contribute, we recommend you install:-
 1. Initialize & update submodule dependencies (plugins, theme ..etc): `git submodule update --init --recursive`.
 1. Then create a branch, naming it along the lines as your topic of contribution.
 
+## TIPS
+1. Lazy way to update submodule(s): `git submodule foreach --recursive git pull origin master`
+1. Clean and reset submodule(s): `git submodule foreach --recursive git reset --hard`
+
 ## EDITING
 Start the development server:- `./develop_server.sh start`. Open http://127.0.0.1:8000 to view.
 Any changes you make will automatically be reflected there.
