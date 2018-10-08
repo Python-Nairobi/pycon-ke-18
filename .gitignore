@@ -1,0 +1,7 @@
+*.tmp
+*.pid
+*.pyc
+output
+*.idea
+*.vscode
+__pycache__
