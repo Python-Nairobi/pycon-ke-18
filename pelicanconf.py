@@ -39,7 +39,7 @@ THEME = "pelican-pyconke-18"
 NAVITEMS = (
     ('PyConKe 18', '/'),
     #('Registration', '/registration'),
-    #('Schedule', '/schedule'),
+    ('Schedule', '/schedule'),
     #('Call for Proposals', '/call_for_proposals'),
     #('Volunteering', '/call_for_volunteers'),
     ('CoC', '/coc')
@@ -71,3 +71,6 @@ TICKET_CATEGORIES = (
 
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['loadcsv']
+DIRECT_TEMPLATES = [
+    'index', 'schedule', 'categories', 'authors', 'archives'
+]
