@@ -51,6 +51,8 @@ jobs:
 
 
   ghp_deploy:
+    docker:
+      - image: circleci/python:3.6.1
     steps:
       - run:
           name: deploy to github
