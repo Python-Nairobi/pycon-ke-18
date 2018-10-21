@@ -55,7 +55,6 @@ jobs:
           paths:
             - venv
             - output
-            - .git
 
 
   ghp_deploy:
@@ -63,6 +62,7 @@ jobs:
       - image: circleci/python:3.6.1
     working_directory: ~/repo
     steps:
+      - checkout
       - attach_workspace:
           at: .
 
