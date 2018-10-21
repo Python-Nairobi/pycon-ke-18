@@ -71,6 +71,3 @@ TICKET_CATEGORIES = (
 
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['loadcsv']
-DIRECT_TEMPLATES = [
-    'index', 'schedule', 'categories', 'authors', 'archives'
-]
