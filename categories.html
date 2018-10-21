@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/theme/css/normalize.min.css">
+    <link rel="stylesheet" href="/theme/css/main.css">
+    <!--[if IE]><link rel="shortcut icon" href="/theme/img/favicon.ico"><![endif]-->
+    <link rel="icon" type="image/png" href="/theme/img/favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="/theme/img/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/theme/img/ms-favicon.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>PyCon-KE 2018</title>
+</head>
+
+<body class="home">
+    <!-- Header -->
+    <header class="wrapper clearfix">
+        <a href="/" class="logo"><img src="/theme/img/logo.svg"></a>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="/">PyConKe 18</a></li>
+                <li><a href="/schedule">Schedule</a></li>
+                <li><a href="/coc">CoC</a></li>
+            </ul>
+        </nav>
+        <!-- /Navigation -->
+    </header>
+    <!-- /Header -->
+    <!-- Main Container -->
+    <!-- /Main Container -->
+
+    <!-- Footer -->
+    <footer>
+        <article class="footer-block">
+            <div class="col-1-2">
+            </div>
+            <nav class="social-links col-1-2">
+                <h3>Connect on social media</h3>
+                <p>Engage through our social media accounts</p>
+                <a href="https://github.com/python-nairobi" class="github" target="_blank">
+                    <img src="/theme/img/social_icons/v2/github.svg">
+                </a>
+                <a href="https://twitter.com/pynbo" class="twitter" target="_blank">
+                    <img src="/theme/img/social_icons/v2/twitter.svg">
+                </a>
+                <a href="https://www.meetup.com/Python-Nairobi/" class="meetup" target="_blank">
+                    <img src="/theme/img/social_icons/v2/meetup.svg">
+                </a>
+                <a href="http://blog.pynbo.or.ke/" class="blog" target="_blank">
+                    <img src="/theme/img/social_icons/v2/blog.svg">
+                </a>
+                <a href="https://www.facebook.com/PythonNairobi/" class="facebook" target="_blank">
+                    <img src="/theme/img/social_icons/v2/facebook.svg">
+                </a>
+                <a href="https://www.youtube.com/channel/UCRDIwuaMTjxCvKyMdKqv6uw" class="youtube" target="_blank">
+                    <img src="/theme/img/social_icons/v2/youtube.svg">
+                </a>
+            </nav>
+        </article>
+    </footer>
+    <!-- /Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(".content.schedule .section-title").empty();
+        // slight tweak for the schedule
+        // after every vr element, wrap the text that follows in a div
+        // this will enable css formatting for the presenter section per talk
+        $(".table tr:not(:first-child)>td:not(:first-child)").contents().filter(function () {
+            return this.nodeType == 3 && $.trim($(this).text()) != '';
+        }).wrap('<div />');
+    </script>
+</body>
+
+</html>

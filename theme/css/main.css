@@ -1,0 +1,849 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700|Rubik:300,400|Rubik+Mono+One");
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  color: #EEE;
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  height: 100%;
+  line-height: 1.4;
+  position: relative;
+}
+
+html.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #2D2546;
+  color: #F16A7A;
+  text-shadow: none;
+}
+
+::selection {
+  background: #2D2546;
+  color: #F16A7A;
+  text-shadow: none;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  /*
+   * Extends the .visuallyhidden class to allow the element to be focusable
+   * when navigated to via the keyboard: h5bp.com/p
+   */
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden .focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+.lf:before,
+.rf:before,
+.col-3-3:before,
+.col-1-1:before,
+.row:before,
+.lf:after,
+.rf:after,
+.col-3-3:after,
+.col-1-1:after,
+.row:after {
+  clear: both;
+  content: '\a';
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.lf {
+  float: left;
+}
+
+.rf {
+  float: right;
+}
+
+.no-padding {
+  padding-right: 0;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: 1.25em;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.col-3-3,
+.col-1-1,
+.row {
+  clear: both;
+  float: none;
+  width: 100%;
+}
+
+.col-2-3 {
+  width: 66.66%;
+}
+
+.col-1-3 {
+  width: 33.33%;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+.col-1-4 {
+  width: 25%;
+}
+
+.col-1-8 {
+  width: 12.5%;
+}
+
+.col-1-5 {
+  width: 20%;
+}
+
+.col-2-5 {
+  width: 40%;
+}
+
+.col-3-5 {
+  width: 60%;
+}
+
+.col-3-4 {
+  width: 75%;
+}
+
+.col-4-5 {
+  width: 80%;
+}
+
+.grid-pad [class*='col-'] {
+  padding: 1.25em 0 1.25em 1.25em;
+}
+
+.grid-pad [class*='col-']:last-of-type {
+  padding-right: 1.25em;
+}
+
+.wrapper {
+  margin: auto 5%;
+  width: 90%;
+}
+
+.button {
+  -webkit-transition: background ease-in 0.15s;
+  -moz-transition: background ease-in 0.15s;
+  transition: background ease-in 0.15s;
+  border: 2px solid transparent;
+  border-radius: 1.5em;
+  color: #fff;
+  display: table;
+  line-height: 1;
+  padding: .5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.button:after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.button.inline {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.button.white {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000;
+}
+
+.button.black {
+  background-color: #000;
+  border-color: #000;
+}
+
+.button.orange {
+  background-color: #ffa500;
+  border-color: #ffa500;
+}
+
+.button.denim {
+  background-color: #728abe;
+  border-color: #728abe;
+}
+
+.button.purple {
+  background-color: #300625;
+  border-color: #300625;
+}
+
+.button.square {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  border-radius: 0;
+  font-size: .9em;
+  font-variant: small-caps;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button.square:hover {
+  opacity: .85;
+}
+
+.button.hollow {
+  background: transparent;
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.button.hollow:hover {
+  background-color: #ccc;
+  color: #fff !important;
+}
+
+.button.hollow.black {
+  border-color: #000;
+  color: #000;
+}
+
+.button.hollow.black:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+.button.hollow.orange {
+  border-color: #ffa500;
+  color: #ffa500;
+}
+
+.button.hollow.orange:hover {
+  background-color: #ffa500;
+  border-color: #ffa500;
+}
+
+.button.hollow.denim {
+  border-color: #728abe;
+  color: #728abe;
+}
+
+.button.hollow.denim:hover {
+  background: #728abe;
+  border-color: #728abe;
+}
+
+.button.hollow.purple {
+  border-color: #300625;
+  color: #300625;
+}
+
+.button.hollow.purple:hover {
+  background: #300625;
+  border-color: #300625;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width: 45em) {
+  body>header {
+    -webkit-transition: height ease 0.5s, background ease-in-out 0.5s;
+    -moz-transition: height ease 0.5s, background ease-in-out 0.5s;
+    transition: height ease 0.5s, background ease-in-out 0.5s;
+    padding: 3em 0 1em;
+    position: relative;
+    width: 100%;
+  }
+
+  body>header:before,
+  body>header:after {
+    clear: both;
+    content: '\a';
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+
+  body>header .logo {
+    display: block;
+    float: left;
+    margin-right: 5em;
+    position: relative;
+    z-index: 2;
+  }
+
+  body>header .logo:before,
+  body>header .logo:after {
+    clear: both;
+    content: '\a';
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+
+  body>header .logo img {
+    height: 4em;
+  }
+
+  body>header nav {
+    background: none;
+    display: block;
+    float: right;
+    line-height: 2.15rem;
+    margin-top: .8rem;
+    position: relative;
+  }
+
+  body>header nav ul,
+  body>header nav li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  body>header nav a {
+    color: #FFF;
+    display: inline-block;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    font-weight: normal;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  body>header nav a:hover,
+  body>header nav a.active {
+    color: #6262E8;
+  }
+
+  body {
+    background: #0C1E31;
+    color: #FFF;
+  }
+
+  .search-icon {
+    width: 24px;
+  }
+
+  section {
+    min-height: 300px;
+    padding-top: 3em;
+  }
+
+  section .section-title {
+    font-family: "Rubik Mono One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    column-span: all;
+    font-weight: 100;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  section h3 {
+    text-transform: uppercase;
+  }
+
+  .info-texture {
+    width: 95%;
+  }
+
+  .purchase-block {
+    background: url("../img/bg_dark.jpg");
+    display: grid;
+    grid-template-columns: 40% 52.5%;
+    grid-column-gap: 4em;
+    min-height: auto;
+    padding: 1.25em 2em 1.5em;
+  }
+
+  .purchase-block .ticket-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: .125rem;
+  }
+
+  .purchase-block .ticket-categories li {
+    height: 140px;
+    justify-content: center;
+    opacity: .8;
+    padding: .5em 1em;
+    text-align: center;
+    background: #191946;
+  }
+
+  .purchase-block .ticket-categories li h3 {
+    font-size: 1em;
+    margin-bottom: .25rem;
+  }
+
+  .purchase-block .ticket-categories li p {
+    margin-top: 0;
+  }
+
+  .purchase-block .ticket-categories li .button {
+    background: #313193;
+    border-radius: 0;
+    margin: auto;
+    opacity: 1;
+  }
+
+  .purchase-block .ticket-categories li:hover,
+  .purchase-block .ticket-categories li .active {
+    background: #6262E8;
+    height: 150px;
+    margin-top: -10px;
+    opacity: 1;
+  }
+
+  .purchase-block .ticket-categories li:hover .button,
+  .purchase-block .ticket-categories li .active .button {
+    opacity: 1;
+  }
+
+  .countdown {
+    border-bottom: 1px solid #6262E8;
+  }
+
+  .countdown div {
+    text-align: center;
+    font-size: 1.2em
+  }
+
+  .countdown div span {
+    font-weight: 900 !important;
+    font-size: 2em !important;
+    color: #6262E8;
+  }
+
+  .countdown,
+  .location_date {
+    width: 100%;
+    display: inline-block;
+  }
+
+  h2 .location_date .date {
+    font-weight: 900;
+    font-size: 1.3em;
+  }
+
+  h2 .location_date em {
+    color: #6262E8;
+    float: right;
+  }
+
+  .topics h3 {
+    color: #FFF;
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+  }
+
+  .topics .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4em;
+  }
+
+  .topics article {
+    padding: .25em 1em .25em 0;
+  }
+
+  .topics article p {
+    font-size: 1em;
+  }
+
+  .description-block {
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    grid-column-gap: 5em;
+  }
+
+  .description-block h1 {
+    font-family: "Rubik Mono One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.75rem;
+  }
+
+  .description-block h1 span {
+    color: #6262E8;
+  }
+
+  .description-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .description-block h2 em {
+    color: #6262E8;
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 1em;
+  }
+
+  .speakers {
+    padding-bottom: 3em;
+  }
+
+  .speakers .section-title {
+    margin: 3rem 0 4rem;
+  }
+
+  .speaker-grid,
+  .get-involved-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 3em;
+  }
+
+  .speaker-grid h3,
+  .get-involved-grid h3 {
+    color: #0C1E31;
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+  }
+
+  .speaker-grid p,
+  .get-involved-grid p {
+    color: #6262E8;
+  }
+
+  .speaker-grid li .card-bottom,
+  .get-involved-grid li .card-bottom {
+    background: #FFF;
+    padding: 2em;
+  }
+
+  .speaker-grid li img,
+  .get-involved-grid li img {
+    width: 100%;
+  }
+
+  .speaker-grid li hr,
+  .get-involved-grid li hr {
+    border-bottom-width: 8px;
+    color: #6262E8;
+    margin: 0;
+    opacity: .5;
+    width: 30%;
+  }
+
+  .get-involved-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .get-involved-grid .card-bottom {
+    min-height: 270px;
+  }
+
+  .get-involved-grid h3 {
+    color: #2D2546;
+    font-size: 1.5em;
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .get-involved-grid p {
+    color: #2D2546;
+  }
+
+  hr {
+    margin: 4em auto 0;
+    color: #6262E8;
+    border: 0;
+    border-bottom: 1px solid rgba(98, 98, 232, 0.5);
+  }
+
+  .sponsors {
+    padding: 3em 0 5em;
+    background-image: url(../img/trangle-white-bg.png), url(../img/trangle-white-bg.png) !important;
+    background-position: 0 0, 0 bottom !important;
+    background-repeat: repeat-x, repeat-x !important;
+    background-color: #fff;
+  }
+
+  .sponsors,
+  .sponsors .section-title {
+    color: #000;
+  }
+
+  .sponsors .section-title {
+    margin-left: 2vw;
+  }
+
+  .sponsors .sponsor-grid {
+    text-align: center;
+    margin-top: 3em;
+  }
+
+  .sponsors .sponsor-grid li {
+    display: inline-block;
+    margin-right: 2.5em;
+    margin-bottom: 1em
+  }
+
+  .sponsors .sponsor-grid img {
+    height: 5em;
+  }
+
+  footer {
+    background: #2C3553;
+    display: grid;
+    grid-template-columns: 52% 40%;
+    grid-column-gap: 2em;
+    margin-top: 7em;
+    padding: 1em 5vw 5em;
+  }
+
+  footer h3 {
+    color: #FFF;
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25em;
+  }
+
+  footer form input {
+    font-size: .8em;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #EEE;
+    color: #FFF;
+    outline: none;
+    padding-bottom: .5rem;
+    margin-right: 1em;
+    width: 250px;
+  }
+
+  footer form input:focus {
+    border-bottom-color: #FFF;
+  }
+
+  footer form button {
+    background: #FFF;
+    border: 2px solid #FFF;
+    color: #444;
+    font-size: .8em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: .5rem 2.125rem;
+    text-transform: uppercase;
+  }
+
+  footer form button:hover {
+    color: #444;
+    cursor: pointer;
+  }
+
+  footer form input::-webkit-input-placeholder {
+    color: #29ABE2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  footer .footer-block {
+    background: url("../img/bg_dark.jpg");
+    min-height: auto;
+    padding: 1.25em 2em 1.5em;
+    width: 90vw;
+    margin-top: -5em;
+    padding-bottom: 4em;
+  }
+
+  footer .social-links a {
+    text-decoration: none;
+    margin-right: 1.5em;
+  }
+
+  footer .social-links a img {
+    height: 32px;
+  }
+
+  footer .social-links a img path {
+    fill: #303030;
+  }
+
+  .schedule table.table {
+    font-size: .9em;
+    margin-bottom: 6em;
+  }
+
+  .schedule {
+    background-image: url(../img/trangle-white-bg.png), url(../img/trangle-white-bg.png) !important;
+    background-position: 0 0, 0 bottom !important;
+    background-repeat: repeat-x, repeat-x !important;
+    background-color: #fff;
+    color: #303030;
+    padding: 3em 2em;
+    margin-top: 5em;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+  }
+
+  .schedule table.table tr:first-child {
+    border-top: 5px solid #5DC9D4;
+    border-bottom: 5px solid #5DC9D4;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .schedule table.table tr:first-child td {
+    color: #5DC9D4;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .schedule table.table td,
+  .schedule table.table th {
+    padding: 1em 0;
+  }
+
+  .schedule table.table td {
+    vertical-align: top;
+  }
+
+  /* time */
+  .schedule table.table tbody tr:not(:first-child)>td:first-child {
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 5px solid #5DC9D4;
+    min-width: 200px;
+  }
+
+  /* cells after time */
+  .schedule table.table tbody tr:not(:first-child)>td:not(:first-child) {
+    font-weight: bold;
+    font-size: 1.2em;
+    min-width: 350px;
+    padding: 1em .5em;
+    border-bottom: 1px solid #5DC9D4;
+  }
+
+  .schedule table.table tbody tr:not(:first-child)>td:first-child,
+  .schedule table.table tbody tr>td:not(:first-child) br~div {
+    color: #9753D5;
+  }
+
+  .schedule table.table tbody tr:last-child td {
+    border-bottom: 3px solid #5DC9D4 !important;
+  }
+}

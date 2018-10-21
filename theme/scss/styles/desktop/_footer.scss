@@ -1,0 +1,66 @@
+//** Footer Styles **/
+
+footer {
+  background: darken($pycon-accent-blue, .4);
+  display: grid;
+  grid-template-columns: 52% 40%;
+  grid-column-gap: 2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 2em 5vw;
+
+  h3 {
+    color: #FFF;    
+    font-family: $heading-stack;
+    font-size: 1.125em;    
+  }
+
+  form {    
+    input {
+      font-size: .8em;
+      background: none;
+      border: 0;
+      border-bottom: 1px solid #EEE;
+      color: #FFF;
+      outline: none;
+      padding-bottom: .5rem;
+      margin-right: 1em;
+      width: 250px;
+      &:focus {
+          border-bottom-color: #FFF;
+      }
+    }
+
+    button {
+      background: #FFF;
+      border: 2px solid #FFF;
+      color: #444;
+      font-size: .8em;
+      font-weight: bold;
+      letter-spacing: 3px;
+      padding: .5rem 2.125rem;
+      text-transform: uppercase;
+        
+      &:hover {
+          color: #444;
+          cursor: pointer;
+      }
+    }
+
+  }
+}
+
+footer form input::-webkit-input-placeholder {
+  color: #29ABE2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+footer .social-links a { 
+  margin-right: 1.5em; 
+}
+footer .social-links a img {
+  height: 32px;
+}
+
+//** End of Footer Styles **/

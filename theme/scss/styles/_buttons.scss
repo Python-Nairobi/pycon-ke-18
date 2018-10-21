@@ -1,0 +1,130 @@
+//* Button Styles */
+
+.button {
+  @include transition(background ease-in .15s);
+
+  border: 2px solid transparent;
+  border-radius: 1.5em;
+  color: #fff;
+  display: table;
+  line-height: 1;
+
+  padding: .5em 1em;
+  position: relative;
+
+  text-decoration: none;
+
+  &:after {
+    @include transition(all .3s);
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+  &.inline {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  &.white {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+  }
+
+  &.black {
+    background-color: #000;
+    border-color: #000;
+  }
+
+  &.orange {
+    background-color: #ffa500;
+    border-color: #ffa500;
+  }
+
+  &.denim {
+    background-color: $denim;
+    border-color: $denim;
+  }
+
+  &.purple {
+    background-color: $purple;
+    border-color: $purple;
+  }
+
+  //Square button
+  &.square {
+    @include transition(opacity .3s ease);
+
+    border-radius: 0;
+    font-size: .9em;
+    font-variant: small-caps;
+    font-weight: 100;
+    letter-spacing: 3px;
+    // margin-top: 1.75em;
+    // min-width: 175px;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  //Hollow  button styles
+  &.hollow {
+    background: transparent;
+    border-color: #ccc;
+    color: #ccc;
+
+    &:hover {
+      background-color: #ccc;
+      color: #fff !important;
+    }
+
+    &.black {
+      border-color: #000;
+      color: #000;
+
+      &:hover {
+        background-color: #000;
+        border-color: #000;
+      }
+    }
+
+    &.orange {
+      border-color: #ffa500;
+      color: #ffa500;
+
+      &:hover {
+        background-color: #ffa500;
+        border-color: #ffa500;
+      }
+
+    }
+
+    &.denim {
+      border-color: $denim;
+      color: $denim;
+
+      &:hover {
+        background: $denim;
+        border-color: $denim;
+      }
+    }
+
+    &.purple {
+      border-color: $purple;
+      color: $purple;
+
+      &:hover {
+        background: $purple;
+        border-color: $purple;
+      }
+    }
+
+  }
+}
+
+//* End of Button Styles */

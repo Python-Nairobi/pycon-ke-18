@@ -1,0 +1,122 @@
+//** Grid Styles **/
+$pad: 1.25em;
+
+.lf,
+.rf {
+  @include clearfix;
+}
+
+.lf {
+  float: left;
+}
+
+.rf {
+  float: right;
+}
+
+.no-padding {
+  padding-right: 0;
+}
+
+
+[class*='col-'] {
+  float: left;
+  padding-right: $pad;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.col-3-3,
+.col-1-1,
+.row {
+  @include clearfix;
+  clear: both;
+  float: none;
+  width: 100%;
+}
+
+.col-2-3 {
+  width: 66.66%;
+}
+
+.col-1-3 {
+  width: 33.33%;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+.col-1-4 {
+  width: 25%;
+}
+
+.col-1-8 {
+  width: 12.5%;
+}
+
+.col-1-5 {
+  width: 20%;
+}
+
+.col-2-5 {
+  width: 40%;
+}
+
+.col-3-5 {
+  width: 60%;
+}
+
+.col-3-4 {
+  width: 75%;
+}
+
+.col-4-5 {
+  width: 80%;
+}
+
+.grid-pad {
+  [class*='col-'] {
+    padding: $pad 0 $pad $pad;
+
+    &:last-of-type {
+      padding-right: $pad;
+    }
+  }
+}
+
+
+@mixin wrapper($extend: true) {
+  @if $extend {
+    @extend %wrapper;
+  } @else {
+    margin: auto 5%;
+    width: 90%;
+  }
+
+}
+
+%wrapper {
+  @include wrapper($extend: false);
+}
+
+.wrapper {
+  @include wrapper(true);
+}
+
+// "Borrowed" from http://thesassway.com/intermediate/simple-grid-mixins
+@mixin col($col, $sum, $gap: $pad, $align: top, $first: false, $last: false) {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: if($first, 0, $gap);
+  padding-right: if($last, 0, $gap);
+
+  @media only screen and (min-width: 768px) {
+    vertical-align: $align;
+    width: percentage($col / $sum);
+  }
+}
+//** End of Grid Styles **/

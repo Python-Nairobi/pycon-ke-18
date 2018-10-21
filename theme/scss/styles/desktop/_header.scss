@@ -1,0 +1,61 @@
+//** Header Styles **/
+
+body > header {
+  @include transition(height ease .5s, background ease-in-out .5s);
+  @include clearfix(false);
+  padding: 3em 0 1em;
+  position: relative;
+  width: 100%;
+
+  .logo {
+    @include clearfix(false);
+    display: block;
+    float: left;
+    margin-right: 5em;
+    position: relative;
+    z-index: 2;
+
+    img {
+      height: 4em;
+    }
+  }
+
+  nav {
+    background: none;
+    display: block;
+    float: right;
+    line-height: 2.15rem;
+    margin-top: .8rem;
+
+    position: relative;
+
+    ul,
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    a {
+      color: #FFF;
+      display: inline-block;
+      font-family: $nav-stack;
+      font-size: .8em;
+      font-weight: normal;
+      margin-right: 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      
+      &:hover,
+      &.active {
+        color: $pycon-accent-blue;
+      }
+
+    }
+
+  }
+  // End of nav styles
+
+
+}
+
+//** End of Header Styles **/

@@ -1,0 +1,13 @@
+//** Desktop Styles ( >1024px ) **/
+@media only screen and (min-width: 45em) {
+
+  //* Header Styles
+  @import 'desktop/header';
+
+  //* Main Desktop Styles
+  @import 'desktop/main';
+
+  //* Footer Styles
+  @import 'desktop/footer';
+
+}

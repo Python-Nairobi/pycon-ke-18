@@ -1,0 +1,227 @@
+//** Main Styles **/
+
+body {
+  background: $pycon-2018-blue;
+  color: #FFF;
+}
+
+.search-icon {
+  width: 24px;
+}
+
+section {
+  min-height: 300px;
+  padding-top: 3em;
+  
+  .section-title {
+    column-span: all;
+    font-weight: 100;
+    font-size: .9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.info-texture {
+  width: 95%;
+  // background: url(../img/2018-texture.svg) center no-repeat;
+}
+
+.purchase-block {
+  background: url('../img/bg_dark.jpg') ;
+  display: grid;
+  grid-template-columns: 40% 52.5%;
+  grid-column-gap: 4em;
+  min-height: auto;
+  padding: 1.25em 2em 1.5em;
+
+    .ticket-categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: .125rem;
+
+      li {
+        height: 140px;
+        justify-content: center;
+        opacity: .8;
+        padding: .5em 1em;
+        text-align: center;
+        background: rgb(25,25,70);
+
+        h3 {
+          font-size: 1em;
+          margin-bottom: .25rem;
+        }
+        p {
+          margin-top: 0;
+        }
+        .button {
+          background: rgb(49,49,147);
+          border-radius: 0;
+          margin: auto;
+          opacity: 1;
+        }
+
+        &:hover,
+        .active {
+          background: $pycon-accent-blue;
+          height: 150px;
+          margin-top: -10px;
+          opacity: 1;
+
+          .button {
+            opacity: 1;
+          }
+        }
+      }
+    }
+}
+
+.topics {
+
+  h3 {
+    color: #FFF;    
+    font-family: $primary-font-stack;
+    font-size: 1.125em;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4em;
+  }
+
+  article {
+    padding: .25em 1em .25em 0;
+
+    p {
+      font-size: .9em;
+    }
+  }
+}
+
+.description-block {
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: 50% 40%;
+  grid-column-gap: 5em;
+
+  h1 {
+    font-family: $heading-stack;
+    font-size: 1.75rem;
+    span {
+      color: $pycon-accent-blue;
+    }
+
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    em {
+      color: $pycon-accent-blue;
+      font-family: $primary-font-stack;
+      font-weight: 100;
+      font-style: normal;
+      margin-left: 1em;
+    }
+  }
+}
+
+
+// Speakers Section Styles
+.speakers {  
+  padding-bottom: 3em;
+
+  .section-title {
+    margin: 3rem 0 4rem;
+  }
+}
+
+.speaker-grid, .get-involved-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 3em;
+  
+  h3 {
+    color: $pycon-2018-blue;
+    font-family: $primary-font-stack;
+    font-size: 1em;
+  }
+
+  p {
+    color: $pycon-accent-blue;
+  }
+
+  li {
+    .card-bottom {
+      background: #FFF;
+      padding: 2em;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    hr {
+      border-bottom-width: 8px;
+      color: $pycon-accent-blue;
+      margin: 0;
+      opacity: .5;
+      width: 30%;
+    }
+
+  }
+
+}
+// Speakers Section Styles
+
+.get-involved-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    h3 {
+      color: $pycon-dark-blue;
+      font-family: $heading-stack;
+    }
+
+    p {
+      color: $pycon-dark-blue;
+    }
+}
+
+hr {
+  margin: 4em auto 0;
+  color: $pycon-accent-blue;
+  border: 0;
+  border-bottom: 1px solid rgba($pycon-accent-blue, .5);
+}
+
+// Sponsors Section Styles 
+.sponsors {
+  margin-left: -5vw;
+  padding: 3em 5vw 5em;
+  width: 105vw;
+
+  .sponsor-grid {
+    margin-top: 3em;
+    
+    li {
+      display: inline-block;
+      margin-right: 2.5em;
+    }
+
+    img {
+      height: 4em;
+    }
+
+  }
+}
+// End of Sponsors Section Styles 
+
+
+//** End of Main Styles **/
