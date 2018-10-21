@@ -65,7 +65,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-
+      - add_ssh_keys:
+          fingerprints:
+            - "aa:92:50:b2:1d:45:c3:a4:29:03:df:9c:0d:e6:b9:6a"
       - run:
           name: deploy to github
           command: |
