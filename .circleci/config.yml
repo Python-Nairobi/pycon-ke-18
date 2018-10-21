@@ -55,6 +55,7 @@ jobs:
           paths:
             - venv
             - output
+            - .git
 
 
   ghp_deploy:
