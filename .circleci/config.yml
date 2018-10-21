@@ -36,7 +36,8 @@ jobs:
             . venv/bin/activate
              wget "https://docs.google.com/spreadsheets/d/1rxa8EfTuZzUFRcUVNtjBFS8jO5oZrzXFpOy0FRGSnQs/gviz/tq?tqx=out:csv&sheet=251018" -O content/251018.csv
              wget "https://docs.google.com/spreadsheets/d/1rxa8EfTuZzUFRcUVNtjBFS8jO5oZrzXFpOy0FRGSnQs/gviz/tq?tqx=out:csv&sheet=261018" -O content/261018.csv
-            $CIRCLE_WORKING_DIRECTORY/developer_server.sh start
+            ./develop_server.sh start
+            ./develop_server.sh stop
 
       # TODO: run tests checking for:-
       #   - plugin build output
