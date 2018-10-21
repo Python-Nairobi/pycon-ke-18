@@ -64,10 +64,13 @@ STATIC_PATHS = [
 ]
 
 TICKET_CATEGORIES = (
-    ('early_bird', '500', 'https://mookh.com/item-details/e856d1c5-7b0a-48e0-8aea-101fda06193e'),
+    ('Regular', '500', 'https://mookh.com/item-details/e856d1c5-7b0a-48e0-8aea-101fda06193e'),
     #('corporate', '1000')
 )
 
+
+PLUGIN_PATHS = ['./pelican-plugins']
+PLUGINS = ['loadcsv']
 DIRECT_TEMPLATES = [
     'index', 'schedule', 'categories', 'authors', 'archives'
 ]

@@ -1,0 +1,70 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+
+      - run:
+          name: pelican build
+          command: |
+            . venv/bin/activate
+             wget "https://docs.google.com/spreadsheets/d/1rxa8EfTuZzUFRcUVNtjBFS8jO5oZrzXFpOy0FRGSnQs/gviz/tq?tqx=out:csv&sheet=251018" -O content/251018.csv
+             wget "https://docs.google.com/spreadsheets/d/1rxa8EfTuZzUFRcUVNtjBFS8jO5oZrzXFpOy0FRGSnQs/gviz/tq?tqx=out:csv&sheet=261018" -O content/261018.csv
+            ./developer_server.sh start
+
+      # TODO: run tests checking for:-
+      #   - plugin build output
+      #   - styling selenium + headless chrome
+      #   - spaelleng mistaeks
+      #   - vulgarities left in as a byproduct of a debbuging session gone wild
+      #- run:
+      #    name: run tests
+      #    command: |
+      #      . venv/bin/activate
+      #      python manage.py test
+
+
+  ghp_deploy:
+    steps:
+      - run:
+          name: deploy to github
+          command: ghp-import -p -f output -m `git log --format=%B -n 1 $CIRCLE_SHA1`
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - build
+      - ghp_deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
