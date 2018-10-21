@@ -50,6 +50,12 @@ jobs:
       #      . venv/bin/activate
       #      python manage.py test
 
+      - persist_to_workspace:
+          root: .
+          paths:
+            - venv
+            - output
+
 
   ghp_deploy:
     docker:
@@ -59,6 +65,10 @@ jobs:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}
+
+      - attach_workspace:
+          at: .
+
       - run:
           name: deploy to github
           command: |
