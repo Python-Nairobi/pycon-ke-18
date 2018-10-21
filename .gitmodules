@@ -1,6 +1,7 @@
 [submodule "pelican-pyconke-18"]
 	path = pelican-pyconke-18
 	url = git@github.com:Python-Nairobi/pelican-pyconke-18.git
+	branch = master
 [submodule "pelican-plugins/pelican-loadcsv"]
 	path = pelican-plugins/loadcsv
 	url = https://github.com/Python-Nairobi/pelican-loadcsv.git
