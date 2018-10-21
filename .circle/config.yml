@@ -31,10 +31,12 @@ jobs:
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
       - run:
-          name: run tests
-          command: ./developer_server.sh start
+          name: pelican build
+          command: |
             . venv/bin/activate
-            python manage.py test
+             wget "https://docs.google.com/spreadsheets/d/1rxa8EfTuZzUFRcUVNtjBFS8jO5oZrzXFpOy0FRGSnQs/gviz/tq?tqx=out:csv&sheet=251018" -O content/251018.csv
+             wget "https://docs.google.com/spreadsheets/d/1rxa8EfTuZzUFRcUVNtjBFS8jO5oZrzXFpOy0FRGSnQs/gviz/tq?tqx=out:csv&sheet=261018" -O content/261018.csv
+            ./developer_server.sh start
 
       # TODO: run tests checking for:-
       #   - plugin build output
