@@ -54,10 +54,13 @@ jobs:
   ghp_deploy:
     docker:
       - image: circleci/python:3.6.1
+    working_directory: ~/repo
     steps:
       - run:
           name: deploy to github
-          command: ghp-import -p -f output -m `git log --format=%B -n 1 $CIRCLE_SHA1`
+          command: |
+            . venv/bin/activate
+            ghp-import -p -f output -m `git log --format=%B -n 1 $CIRCLE_SHA1`
 
 workflows:
   version: 2
