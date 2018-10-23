@@ -544,14 +544,17 @@ li {
     display: inline-block;
   }
 
-  h2 .location_date .date {
+  h2 .location_date .date,
+  h2 .location_date .location {
     font-weight: 900;
-    font-size: 1.3em;
+    font-size: 1.6em;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
   }
 
-  h2 .location_date em {
+  h2 .location_date .location {
     color: #6262E8;
-    float: right;
   }
 
   .topics h3 {
