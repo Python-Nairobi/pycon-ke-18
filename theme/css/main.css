@@ -785,6 +785,8 @@ li {
   .schedule table.table {
     font-size: .9em;
     margin-bottom: 6em;
+    width: 100%;
+    table-layout: fixed;
   }
 
   .schedule {
