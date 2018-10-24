@@ -178,9 +178,14 @@
     <script src="/theme/js/moment-timezone-with-data.min.js"></script>
     <script src="/theme/js/jquery.countdown.min.js"></script>
     <script type="text/javascript">
-        var pyconDate = moment.tz("2018-10-05 08:00", "Africa/Nairobi");
         // https://github.com/hilios/jQuery.countdown
-        $('#countdown').countdown("2018/10/05 08:00:00", function (event) {
+        // format for datetime is one of these:
+        // YYYY/MM/DD
+        // MM/DD/YYYY
+        // YYYY/MM/DD hh:mm:ss
+        // MM/DD/YYYY hh:mm:ss
+        var pyconDate = moment.tz("2018-10-25 08:00", "Africa/Nairobi");
+        $('#countdown').countdown(pyconDate.toDate(), function (event) {
             var format = '<div class="col-1-4 hour">Hour%!H <br /><span>%H</span></div>' +
                          '<div class="col-1-4 minute">Minute%!M <br /><span>%M</span></div>' +
                          '<div class="col-1-4 seconds">Second%!S <br /><span>%S</span></div>';
