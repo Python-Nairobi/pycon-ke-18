@@ -789,7 +789,6 @@ li {
     font-size: .9em;
     margin-bottom: 6em;
     width: 100%;
-    table-layout: fixed;
   }
 
   .schedule {
@@ -831,16 +830,16 @@ li {
     font-weight: bold;
     font-size: 1.5em;
     border-bottom: 5px solid #5DC9D4;
-    min-width: 200px;
+    min-width: 160px;
   }
 
   /* cells after time */
   .schedule table.table tbody tr:not(:first-child)>td:not(:first-child) {
     font-weight: bold;
     font-size: 1.2em;
-    min-width: 350px;
     padding: 1em .5em;
     border-bottom: 1px solid #5DC9D4;
+    min-width: 200px;
   }
 
   .schedule table.table tbody tr:not(:first-child)>td:first-child,
